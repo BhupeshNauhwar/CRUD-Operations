@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <link rel="stylesheet" href="/edit.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li id="li"> CRUD APP</li>
+
+            <span class="option">
+                <li><a href="/">Home</a></li>
+                <li><a href="/add">Add User</a></li>
+            </span>
+        </ul>
+    </nav>
+
+    <h1>Edit User</h1>
+    <form action="/edit/{{userdata._id}}" method="post">
+    <input type="hidden" name="_id" value="userdata._id">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" required placeholder="Enter Name" value="{{userdata.name}}"><br><br>
+    
+    <label for="phone">Phone</label>
+    <input type="phone" name="phone" id="phone" required placeholder="Enter Phone" value="{{userdata.phone}}"><br><br>
+    <label for="age">Age</label>
+    <input type="age" name="age" id="age" required placeholder="Enter Age" value="{{userdata.age}}"><br><br>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required placeholder="Enter Email" value="{{userdata.email}}"><br><br>
+    
+    <label for="address">Address</label>
+    <input type="text" name="address" id="address" required placeholder="Enter Address" value="{{userdata.address}}"><br><br>
+    <input type="submit" name="Submit">
+    
+    </form>
+
+
+</body>
+</html>
